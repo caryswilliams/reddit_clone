@@ -13,3 +13,140 @@
  *= require_tree .
  *= require_self
  */
+
+
+ * {
+	box-sizing: border-box;
+}
+
+/* Main Header & Links */
+
+.main-header-logo {
+	height: 3em;
+	justify-content: center;
+	align-items: center;
+}
+
+.main-header {
+	display: flex;
+	justify-content: center; 
+	flex-wrap: wrap;
+	align-items: center;
+}
+
+.main-nav-link {
+	margin: 0 1em;
+	color: #E51E23;
+	text-decoration: none;
+	font-weight: bold;
+	letter-spacing: 1px;
+}
+
+.main-nav-link:hover {
+	color: #6CCA56;
+}
+
+/* Search Bar */
+
+.search-bar {
+	margin-top: 5px;
+	margin-bottom: -10px;
+	display: flex;
+	justify-content: flex-end;
+}
+
+/* Hero Banner */
+
+.hero {
+	height: 250px;
+	background: url('../assets/gaming-banner5.jpg') no-repeat center;
+	background-color: #F3D946;
+	background-size: contain;
+}
+
+.hero-title {
+	color: white;
+	text-shadow: 0 1px 1px rgba(0,0,0, .8);
+	text-transform: uppercase;
+	font-size: 1.8rem;
+	padding-top: 60px; 
+	padding-right: 150px;
+	font-weight: bold;
+	letter-spacing: 2.5px;
+	text-align: center;
+}
+
+.hero-subtitle {
+	color: white;
+	text-shadow: 0 1px 1px rgba(0,0,0, .8);
+	letter-spacing: 1.5px;
+	text-align: center;
+	font-size: 1.5rem;
+	padding-right: 130px;
+}
+
+/* Log In Form */
+
+.log-in-form {
+	margin-top: 10px;
+}
+
+/* Posts - General */
+
+.post {
+	display: flex;
+	align-items: center;
+	border: 5px solid #BABFCB;
+	margin-top: 10px;
+}
+
+.post-index, .post-upvotes, .post-image {
+	margin: 1em;
+}
+
+.post-image-image {
+	height: 5em;
+}
+
+/* Posts - Upvotes */
+
+.post-upvotes {
+	display: flex;
+	justify-content: center;
+	flex-direction: column;
+	text-align: center;
+}
+
+.post-upvotes p {
+	margin-top: -1px;
+	margin-bottom: -1px;
+}
+
+.post-upvote-image, .post-downvote-image {
+	height: 2em;
+}
+
+.post-upvote-image:hover {
+	background-color: #6CCA56;
+}
+
+.post-downvote-image:hover {
+	background-color: #E51E23;
+}
+
+/* Media Queries */
+
+@media (min-width: 700px) {
+	.main-header {
+		display: flex;
+		justify-content: space-between
+	}
+	.hero-title {
+		padding-top: 85px;
+	}
+}
+
+
+
+
+
