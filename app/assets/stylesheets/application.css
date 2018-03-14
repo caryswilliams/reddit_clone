@@ -100,12 +100,20 @@
 	margin-top: 10px;
 }
 
-.post-index, .post-upvotes, .post-image {
+.post-index, .post-upvotes, .post-image, .post-title, .post-content {
 	margin: 1em;
 }
 
 .post-image-image {
 	height: 5em;
+}
+
+.create-new-post:hover, .link-to-show:hover, .link-to-edit:hover, .link-to-destroy:hover {
+	color: #6CCA56;
+}
+
+.create-new-post, .link-to-show, .link-to-edit, .link-to-destroy {
+	color: #E51E23;
 }
 
 /*********** Posts - Upvotes ***********/
@@ -134,18 +142,6 @@
 	background-color: #E51E23;
 }
 
-/************* Media Queries ************/
-
-@media (min-width: 700px) {
-	.main-header {
-		display: flex;
-		justify-content: space-between
-	}
-	.hero-title {
-		padding-top: 85px;
-	}
-}
-
 /************** Footer *****************/
 
 .main-footer {
@@ -165,4 +161,16 @@
 
 .main-footer-link:hover {
 	color: #6CCA56;
+}
+
+/************* Media Queries ************/
+
+@media (min-width: 700px) {
+	.main-header {
+		display: flex;
+		justify-content: space-between
+	}
+	.hero-title {
+		padding-top: 85px;
+	}
 }
