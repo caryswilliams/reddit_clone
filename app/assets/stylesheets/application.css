@@ -19,7 +19,7 @@
 	box-sizing: border-box;
 }
 
-/* Main Header & Links */
+/********** Main Header & Links ***********/
 
 .main-header-logo {
 	height: 3em;
@@ -46,7 +46,7 @@
 	color: #6CCA56;
 }
 
-/* Search Bar */
+/************* Search Bar *************/
 
 .search-bar {
 	margin-top: 5px;
@@ -55,7 +55,7 @@
 	justify-content: flex-end;
 }
 
-/* Hero Banner */
+/************* Hero Banner *************/
 
 .hero {
 	height: 250px;
@@ -85,13 +85,13 @@
 	padding-right: 130px;
 }
 
-/* Log In Form */
+/************** Log In Form **************/
 
 .log-in-form {
 	margin-top: 10px;
 }
 
-/* Posts - General */
+/************ Posts - General ************/
 
 .post {
 	display: flex;
@@ -108,7 +108,7 @@
 	height: 5em;
 }
 
-/* Posts - Upvotes */
+/*********** Posts - Upvotes ***********/
 
 .post-upvotes {
 	display: flex;
@@ -134,7 +134,7 @@
 	background-color: #E51E23;
 }
 
-/* Media Queries */
+/************* Media Queries ************/
 
 @media (min-width: 700px) {
 	.main-header {
@@ -146,7 +146,23 @@
 	}
 }
 
+/************** Footer *****************/
 
+.main-footer {
+	margin-top: 5px;
+	padding-top: 10px;
+	padding-bottom: 10px;
+	border-bottom: 3px solid #F3D946;
+	border-top: 3px solid #F3D946;
+	text-align: center;
+}
 
+.main-footer-link {
+	color: #E51E23;
+	text-decoration: none;
+	font-weight: bold;
+}
 
-
+.main-footer-link:hover {
+	color: #6CCA56;
+}
