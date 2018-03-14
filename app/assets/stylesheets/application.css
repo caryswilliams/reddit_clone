@@ -114,6 +114,7 @@
 
 .create-new-post, .link-to-show, .link-to-edit, .link-to-destroy {
 	color: #E51E23;
+	text-decoration: none;
 }
 
 /*********** Posts - Upvotes ***********/

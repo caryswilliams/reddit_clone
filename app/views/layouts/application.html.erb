@@ -12,8 +12,8 @@
   <header id="top" class="main-header">
     <img src="assets/gaming-icon2.jpeg" alt="reddit-logo" class="main-header-logo">
   <nav class="main-nav"> 
-    <a href="" class="hot-link main-nav-link">Hot</a>
-    <a href="" class="new-link main-nav-link">New</a>
+    <%= link_to "Home", root_path, class: 'main-nav-link' %>
+    <%= link_to "Posts", posts_path, class: 'main-nav-link' %>
     <a href="" class="rising-link main-nav-link">Rising</a>
     <a href="" class="controversial-link main-nav-link">Controversial</a>
     <a href="" class="top-link main-nav-link">Top</a>
