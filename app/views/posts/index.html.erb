@@ -5,9 +5,11 @@
 <body>
 <% @posts.each do |post| %>
     <div class="post">
-      <td><%= pluralize(post.votes.up.count - post.votes.down.count, "vote") %></td>
-      <td><%= button_to '+1', upvote_post_path(post), method: :post %></td>
-      <td><%= button_to '-1', downvote_post_path(post), method: :post %></td>
+      <div class="post-upvotes">
+        <%= button_to '▲', upvote_post_path(post), method: :post %>
+        <%= (post.votes.up.count - post.votes.down.count) %>
+        <%= button_to '▼', downvote_post_path(post), method: :post %>
+      </div>
       <div class="">
         <div class="post-title">
           <h3><%= post.title %></h3>

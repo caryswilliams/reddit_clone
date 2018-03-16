@@ -126,10 +126,10 @@
 	text-align: center;
 }
 
-.post-upvotes p {
+/* .post-upvotes p {
 	margin-top: -1px;
 	margin-bottom: -1px;
-}
+} */
 
 .post-upvote-image, .post-downvote-image {
 	height: 2em;
