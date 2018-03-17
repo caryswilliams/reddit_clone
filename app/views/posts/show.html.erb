@@ -1,22 +1,21 @@
 <p id="notice"><%= notice %></p>
 
-<p>
-  <b>Title:</b>
-  <%= @post.title %>
-</p>
+<div class = "show-post">
+  <p>
+    <h3><%= @post.title %></h3>
+  </p>
+  <p>
+    <%= @post.content %>
+  </p>
+</div>
  
-<p>
-  <b>Content:</b>
-  <%= @post.content %>
-</p>
- 
-<h2>Comments</h2>
+<h2 class = "comments-headline">Comments</h2>
 <%= render @post.comments %>
  
-<h2>Add a comment:</h2>
+<h2 class = "comments-headline">Join in the discussion:</h2>
 <%= render "comments/form" %>
  
 <br />
  
-<%= link_to 'Edit Post', edit_post_path(@post) %> |
-<%= link_to 'Back to Posts', posts_path %> |
+<%= link_to 'Edit Post', edit_post_path(@post), class: "link-to" %> |
+<%= link_to 'Back to Posts', posts_path, class: "link-to"  %> |

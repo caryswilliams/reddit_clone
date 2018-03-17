@@ -142,6 +142,55 @@
 	height: 2em;
 }
 
+/************ Posts in Show *************/
+
+.show-post {
+	border: 5px solid #BABFCB;
+	margin-top: 10px;
+	padding: 5px;
+}
+
+/************* Comments in Show **********/
+
+.show-comment {
+	border: 5px solid #F3D946;
+	margin-top: 10px;
+	padding: 5px;
+}
+
+.link-to {
+	color: #E51E23;
+	text-decoration: none;
+}
+
+.link-to:hover {
+	color: #6CCA56;
+}
+
+.comments-headline {
+	color: #E51E23;
+}
+
+.destroy-comment-link {
+	color: 	#40b526;
+	text-decoration: none;
+}
+
+.destroy-comment-link:hover {
+	color: #E51E23;
+}
+
+/************* Edit Posts Page **********/
+
+.edit-page-headline {
+	color: #E51E23;
+}
+
+/************* Edit Posts Page **********/
+
+.new-post-headline {
+	color: #E51E23;
+}
 
 /************** Footer *****************/
 

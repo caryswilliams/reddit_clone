@@ -1,6 +1,6 @@
-<h1>Editing Post</h1>
+<h1 class = "edit-page-headline">Edit Your Post Below</h1>
 
 <%= render 'form', post: @post %>
 
-<%= link_to 'Show', @post %> |
-<%= link_to 'Back', posts_path %>
+<%= link_to 'Show', @post, class: "link-to" %> |
+<%= link_to 'Back', posts_path, class: "link-to" %>
