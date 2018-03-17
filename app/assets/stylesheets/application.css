@@ -108,13 +108,17 @@
 	height: 5em;
 }
 
-.create-new-post:hover, .link-to-show:hover, .link-to-edit:hover, .link-to-destroy:hover {
+.create-new-post:hover, .link-to-show:hover, .link-to-edit:hover, .link-to-delete:hover {
 	color: #6CCA56;
 }
 
-.create-new-post, .link-to-show, .link-to-edit, .link-to-destroy {
+.create-new-post, .link-to-show, .link-to-edit, .link-to-delete {
 	color: #E51E23;
 	text-decoration: none;
+}
+
+.link-to-show, .link-to-edit, .link-to-delete {
+	padding-right: 10px;
 }
 
 /*********** Posts - Upvotes ***********/
@@ -126,22 +130,18 @@
 	text-align: center;
 }
 
-/* .post-upvotes p {
-	margin-top: -1px;
-	margin-bottom: -1px;
-} */
+.post-upvote {
+	color: green;
+}
+
+.post-downvote {
+	color: #E51E23;
+}
 
 .post-upvote-image, .post-downvote-image {
 	height: 2em;
 }
 
-.post-upvote-image:hover {
-	background-color: #6CCA56;
-}
-
-.post-downvote-image:hover {
-	background-color: #E51E23;
-}
 
 /************** Footer *****************/
 

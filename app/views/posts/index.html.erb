@@ -6,9 +6,9 @@
 <% @posts.each do |post| %>
     <div class="post">
       <div class="post-upvotes">
-        <%= button_to '▲', upvote_post_path(post), method: :post %>
+        <%= button_to '▲', upvote_post_path(post), method: :post, class: 'post-upvote' %>
         <%= (post.votes.up.count - post.votes.down.count) %>
-        <%= button_to '▼', downvote_post_path(post), method: :post %>
+        <%= button_to '▼', downvote_post_path(post), method: :post, class: 'post-downvote' %>
       </div>
       <div class="">
         <div class="post-title">
@@ -21,7 +21,7 @@
 			<div>
 			<%= link_to 'Show', post, class: 'link-to-show' %>
 			<%= link_to 'Edit', edit_post_path(post), class: 'link-to-edit' %>
-			<%= link_to 'Destroy', post, method: :delete, data: { confirm: 'Are you sure?' }, class: 'link-to-destroy' %>
+			<%= link_to 'Delete', post, method: :delete, data: { confirm: 'Are you sure?' }, class: 'link-to-delete' %>
 			</div>
 		</div>
 <% end %>
