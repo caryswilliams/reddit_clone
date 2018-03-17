@@ -171,22 +171,13 @@
 	color: #E51E23;
 }
 
-.destroy-comment-link {
-	color: 	#40b526;
-	text-decoration: none;
-}
-
-.destroy-comment-link:hover {
-	color: #E51E23;
-}
-
 /************* Edit Posts Page **********/
 
 .edit-page-headline {
 	color: #E51E23;
 }
 
-/************* Edit Posts Page **********/
+/************* New Posts Page **********/
 
 .new-post-headline {
 	color: #E51E23;
