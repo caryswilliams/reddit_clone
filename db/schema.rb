@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2018_03_15_194303) do
+ActiveRecord::Schema.define(version: 2018_03_20_183103) do
 
   create_table "comments", force: :cascade do |t|
     t.string "commenter"
@@ -21,18 +21,15 @@ ActiveRecord::Schema.define(version: 2018_03_15_194303) do
     t.index ["post_id"], name: "index_comments_on_post_id"
   end
 
-  create_table "games", force: :cascade do |t|
-    t.text "title"
-    t.date "reslease_date"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-  end
-
   create_table "posts", force: :cascade do |t|
     t.string "title"
     t.text "content"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.string "image_file_name"
+    t.string "image_content_type"
+    t.integer "image_file_size"
+    t.datetime "image_updated_at"
   end
 
   create_table "votes", force: :cascade do |t|
