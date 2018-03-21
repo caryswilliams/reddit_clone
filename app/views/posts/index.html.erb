@@ -10,6 +10,9 @@
         <%= (post.votes.up.count - post.votes.down.count) %>
         <%= button_to '▼', downvote_post_path(post), method: :post, class: 'post-downvote' %>
       </div>
+      <div>
+        <%= image_tag post.image.url(:thumb) %>
+      </div>
       <div class="">
         <div class="post-title">
           <h3><%= post.title %></h3>

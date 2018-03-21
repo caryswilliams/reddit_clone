@@ -121,6 +121,10 @@
 	padding-right: 10px;
 }
 
+.style {
+	border: 10px #E51E23;
+}
+
 /*********** Posts - Upvotes ***********/
 
 .post-upvotes {
