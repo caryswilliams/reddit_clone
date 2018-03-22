@@ -9,6 +9,7 @@
   </head>
 
   <body>
+
   <header id="top" class="main-header">
   <%= image_tag("gaming-icon2.jpeg", alt: "reddit-logo", class: 'main-header-logo') %>   
   <nav class="main-nav"> 
@@ -20,6 +21,17 @@
     <a href="" class="gilded-link main-nav-link">Gilded</a>
     <a href="" class="wiki-link main-nav-link">Wiki</a>
   </nav>
+
+  <p class="navbar-text pull-right">
+<% if user_signed_in? %>
+  Logged in as <strong><%= current_user.username %></strong>.
+  <%= link_to 'Edit profile', edit_user_registration_path, :class => 'navbar-link' %> |
+  <%= link_to "Logout", destroy_user_session_path, method: :delete, :class => 'navbar-link'  %>
+<% else %>
+  <%= link_to "Sign up", new_user_registration_path, :class => 'navbar-link'  %> |
+  <%= link_to "Login", new_user_session_path, :class => 'navbar-link'  %>
+<% end %>
+</p>
 </header>
 
 <section class="hero">
@@ -28,6 +40,9 @@
 </section>
 
     <%= yield %>
+
+      <p class="notice"><%= notice %></p>
+       <p class="alert"><%= alert %></p>
 
   </body>
 

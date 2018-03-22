@@ -1,4 +1,7 @@
 Rails.application.routes.draw do
+
+  devise_for :users
+  
   resources :posts do
     resources :comments
     member do
@@ -7,9 +10,7 @@ Rails.application.routes.draw do
     end
   end
 
-
-  get 'home/index'
-  root 'home#index'
+  root to: 'posts#index'
 
 end
 

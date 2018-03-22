@@ -62,3 +62,7 @@ end
 gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
 
 gem "paperclip", "~> 5.2.1"
+
+# https://github.com/plataformatec/devise
+
+gem 'devise'

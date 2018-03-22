@@ -5,6 +5,9 @@
     <%= comment.commenter %>
   </p>
   
+Added:<%= time_ago_in_words(comment.created_at) %> ago<br>
+ Added by: <%= current_user.username  %>
+
   <p>
     <b>Comment:</b>
     <%= comment.body %>
