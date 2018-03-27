@@ -14,9 +14,38 @@
  *= require_self
  */
 
+ /********** General ***********/
 
  * {
 	box-sizing: border-box;
+}
+
+.link-to {
+	color: #E51E23;
+	text-decoration: none;
+}
+
+.link-to:hover {
+	color: #6CCA56;
+}
+
+/********** User Nav Bar ***********/
+
+.user-navbar {
+	display: flex;
+	justify-content: center;
+}
+
+.user-navbar-username {
+	margin: 0 0.5em;
+	letter-spacing: 1px;
+}
+
+.user-navbar-link {
+margin: 0 0.5em;
+color: #E51E23;
+text-decoration: none;
+letter-spacing: 1px;
 }
 
 /********** Main Header & Links ***********/
@@ -154,27 +183,6 @@
 	padding: 5px;
 }
 
-/************* Comments in Show **********/
-
-.show-comment {
-	border: 5px solid #F3D946;
-	margin-top: 10px;
-	padding: 5px;
-}
-
-.link-to {
-	color: #E51E23;
-	text-decoration: none;
-}
-
-.link-to:hover {
-	color: #6CCA56;
-}
-
-.comments-headline {
-	color: #E51E23;
-}
-
 /************* Edit Posts Page **********/
 
 .edit-page-headline {
@@ -184,6 +192,24 @@
 /************* New Posts Page **********/
 
 .new-post-headline {
+	color: #E51E23;
+}
+
+/************* Comments in Show **********/
+
+.show-comment {
+	border: 5px solid #F3D946;
+	margin-top: 10px;
+	padding: 5px;
+}
+
+.comments-headline {
+	color: #E51E23;
+}
+
+/************* Edit User Page **********/
+
+.edit-user-headline, .cancel-headline {
 	color: #E51E23;
 }
 

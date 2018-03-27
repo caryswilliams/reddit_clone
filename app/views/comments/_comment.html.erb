@@ -4,15 +4,13 @@
     <b>Name:</b>
     <%= comment.commenter %>
   </p>
-  
-  Added:<%= time_ago_in_words(comment.created_at) %> ago<br>
-  Added by: <%= comment.user&.username  %>
 
   <p>
     <b>Comment:</b>
     <%= comment.body %>
   </p>
 
+  <i>Added <%= time_ago_in_words(comment.created_at) %> ago by <%= comment.user&.username  %></i>
 
   <p>
     <%= link_to 'Destroy Comment', [comment.post, comment],
