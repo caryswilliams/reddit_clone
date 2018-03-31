@@ -154,6 +154,13 @@ letter-spacing: 1px;
 	border: 10px #E51E23;
 }
 
+.post-links {
+	display: flex;
+	justify-content: center;
+	flex-direction: column;
+	text-align: left;
+}
+
 /*********** Posts - Upvotes ***********/
 
 .post-upvotes {
@@ -235,4 +242,3 @@ letter-spacing: 1px;
 }
 
 /************* Media Queries ************/
-

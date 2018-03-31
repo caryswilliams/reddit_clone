@@ -11,7 +11,9 @@
   <body>
 
   <header id="top" class="main-header">
-  <%= image_tag("gaming-icon2.jpeg", alt: "reddit-logo", class: 'main-header-logo') %>   
+  <%= link_to root_path do %>
+    <%= image_tag('gaming-icon2.jpeg', class: 'main-header-logo' ) %>
+  <% end %>
   <nav class="main-nav"> 
     <%= link_to "Home", root_path, class: 'main-nav-link' %>
     <%= link_to "Posts", posts_path, class: 'main-nav-link' %>
