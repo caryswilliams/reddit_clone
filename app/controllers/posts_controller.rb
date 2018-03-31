@@ -1,12 +1,15 @@
 class PostsController < ApplicationController
   before_action :authenticate_user!
   before_action :set_post, only: [:show, :edit, :update, :destroy]
+  
+  load_and_authorize_resource
 
   # GET /posts
   # GET /posts.json
   def index
     @posts = Post.all.sort_by{ |post| post.votes.down.count - post.votes.up.count }
   end
+
 
   # GET /posts/1
   # GET /posts/1.json
@@ -25,7 +28,7 @@ class PostsController < ApplicationController
   # POST /posts
   # POST /posts.json
   def create
-    @post = Post.new(post_params)
+    @post = Post.new(post_params.merge(user: current_user))
 
     respond_to do |format|
       if @post.save

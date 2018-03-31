@@ -66,3 +66,6 @@ gem "paperclip", "~> 5.2.1"
 # https://github.com/plataformatec/devise
 
 gem 'devise'
+
+# https://github.com/CanCanCommunity/cancancan
+gem 'cancancan', '~> 2.0'

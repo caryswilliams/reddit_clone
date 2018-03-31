@@ -236,12 +236,3 @@ letter-spacing: 1px;
 
 /************* Media Queries ************/
 
-@media (min-width: 700px) {
-	.main-header {
-		display: flex;
-		justify-content: space-between
-	}
-	.hero-title {
-		padding-top: 85px;
-	}
-}
