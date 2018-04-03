@@ -7,9 +7,9 @@
 <% @posts.each do |post| %>
     <div class="post">
       <div class="post-upvotes">
-        <%= button_to '▲', upvote_post_path(post), method: :post, class: 'post-upvote' %>
-        <%= (post.votes.up.count - post.votes.down.count) %>
-        <%= button_to '▼', downvote_post_path(post), method: :post, class: 'post-downvote' %>
+        <%= button_to '▲', upvote_post_path(post), method: :post, class: 'post-upvote', remote: true %>
+        <span id="votes-<%=post.id%>"><%= (post.votes.up.count - post.votes.down.count) %></span>
+        <%= button_to '▼', downvote_post_path(post), method: :post, class: 'post-downvote', remote: true %>
       </div>
       <div>
         <%= image_tag post.image.url(:thumb) %>
@@ -20,7 +20,7 @@
         </div>
         <div class="post-content">
           <%= post.content.truncate_words(40) %>
-          <br>
+          <br><br>
           <i>Added <%= time_ago_in_words(post.created_at) %> ago by <%= post.user&.username  %></i>
         </div>
       </div>

@@ -4,12 +4,15 @@ class Ability
   def initialize(user)
     can :read, :all    
     if user.present?  # additional permissions for logged in users (they can manage their posts)
-      can :manage, Post, user_id: user.id 
+      can :manage, Post, user_id: user.id
+      can :upvote, :all
+      can :downvote, :all
       if user.admin?  # additional permissions for administrators
         can :manage, :all
       end
     end
   end
+end
     # Define abilities for the passed in user here. For example:
     #
     #   user ||= User.new # guest user (not logged in)
@@ -36,5 +39,5 @@ class Ability
     #
     # See the wiki for details:
     # https://github.com/CanCanCommunity/cancancan/wiki/Defining-Abilities
-  end
+
 

@@ -48,6 +48,10 @@ text-decoration: none;
 letter-spacing: 1px;
 }
 
+.user-navbar-link:hover {
+	color: #6CCA56;
+}
+
 /********** Main Header & Links ***********/
 
 .main-header-logo {

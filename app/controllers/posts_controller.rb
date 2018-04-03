@@ -68,14 +68,28 @@ class PostsController < ApplicationController
 def upvote
   @post = Post.find(params[:id])
   @post.votes.create(direction: :up)
-  redirect_to(posts_path)
+
+  respond_to do |format|
+    format.html { redirect_to(posts_path) }
+    format.js
+    format.json { render json: @post}
+  end
+
+#  redirect_to(posts_path)
 end
 
 def downvote
   @post = Post.find(params[:id])
   @post.votes.create(direction: :down)
-  redirect_to(posts_path)
-end
+
+  respond_to do |format|
+    format.html { redirect_to(posts_path) }
+    format.js
+    format.json { render json: @post}
+  end
+
+  # redirect_to(posts_path)
+  end
 
   private
     # Use callbacks to share common setup or constraints between actions.
@@ -87,4 +101,4 @@ end
     def post_params
       params.require(:post).permit(:title, :content, :image)
     end
-end
+  end
