@@ -4,53 +4,51 @@
     <title>Levelup</title>
     <%= csrf_meta_tags %>
 
-    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
   </head>
 
   <body>
+    <header id="top" class="main-header">
+      <%= link_to root_path do %>
+        <%= image_tag('gaming-icon2.jpeg', class: 'main-header-logo' ) %>
+      <% end %>
 
-  <header id="top" class="main-header">
-  <%= link_to root_path do %>
-    <%= image_tag('gaming-icon2.jpeg', class: 'main-header-logo' ) %>
-  <% end %>
-  <nav class="main-nav"> 
-    <%= link_to "Home", root_path, class: 'main-nav-link' %>
-    <%= link_to "Posts", posts_path, class: 'main-nav-link' %>
-    <a href="" class="rising-link main-nav-link">Rising</a>
-    <a href="" class="controversial main-nav-link">Controversial</a>
-    <a href="" class="top-link main-nav-link">Top</a>
-    <a href="" class="gilded-link main-nav-link">Gilded</a>
-    <a href="" class="wiki-link main-nav-link">Wiki</a>
-  </nav>
+      <nav class="main-nav"> 
+        <%= link_to "Home", root_path, class: 'main-nav-link' %>
+        <%= link_to "Posts", posts_path, class: 'main-nav-link' %>
+        <a href="" class="rising-link main-nav-link">Rising</a>
+        <a href="" class="controversial main-nav-link">Controversial</a>
+        <a href="" class="top-link main-nav-link">Top</a>
+        <a href="" class="gilded-link main-nav-link">Gilded</a>
+        <a href="" class="wiki-link main-nav-link">Wiki</a>
+      </nav>
+    </header>
 
-</header>
+    <p class="user-navbar">
+      <% if user_signed_in? %>
+        Logged in as <strong class="user-navbar-username"><%= current_user.username %></strong>
+        <%= link_to 'Edit profile', edit_user_registration_path, class: "user-navbar-link" %> |
+        <%= link_to "Logout", destroy_user_session_path, method: :delete, class: "user-navbar-link"  %>
+      <% else %>
+        <%= link_to "Sign up", new_user_registration_path, class: "user-navbar-link"  %> |
+        <%= link_to "Login", new_user_session_path, class: "user-navbar-link"  %>
+      <% end %>
+    </p>
 
-  <p class="user-navbar">
-    <% if user_signed_in? %>
-      Logged in as <strong class="user-navbar-username"><%= current_user.username %></strong>
-      <%= link_to 'Edit profile', edit_user_registration_path, class: "user-navbar-link" %> |
-      <%= link_to "Logout", destroy_user_session_path, method: :delete, class: "user-navbar-link"  %>
-    <% else %>
-      <%= link_to "Sign up", new_user_registration_path, class: "user-navbar-link"  %> |
-      <%= link_to "Login", new_user_session_path, class: "user-navbar-link"  %>
-    <% end %>
-  </p>
-
-
-<section class="hero">
-  <h2 class="hero-title">Welcome to Level Up</h2>
-  <h3 class="hero-subtitle">Ahead of the Game</h3>
-</section>
+    <section class="hero-banner">
+      <h2 class="hero-title">Welcome to Level Up</h2>
+      <h3 class="hero-subtitle">Ahead of the Game</h3>
+    </section>
 
     <%= yield %>
 
-      <p class="notice"><%= notice %></p>
-       <p class="alert"><%= alert %></p>
-
+    <p class="notice"><%= notice %></p>
+    <p class="alert"><%= alert %></p>
   </body>
 
   <footer class="main-footer">
     <a href="#top" class = "main-footer-link">Back to top &raquo;</a>
   </footer>
+
 </html>

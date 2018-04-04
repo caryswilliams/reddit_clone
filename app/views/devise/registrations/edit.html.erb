@@ -12,8 +12,17 @@
     <div>Currently waiting confirmation for: <%= resource.unconfirmed_email %></div>
   <% end %>
 
+<br>
+
   <div class="field">
-    <%= f.label :password %> <i>(leave blank if you don't want to change it)</i><br />
+    <%= f.label :current_password %> <i>(Please enter your current password to confirm your changes)</i><br />
+    <%= f.password_field :current_password, autocomplete: "off" %>
+  </div>
+
+<br>
+
+  <div class="field">
+    <%= f.label :new_password %> <i>(Please leave blank if you do not wish to change your password)</i><br />
     <%= f.password_field :password, autocomplete: "off" %>
     <% if @minimum_password_length %>
       <br />
@@ -21,23 +30,24 @@
     <% end %>
   </div>
 
+<br>
+
   <div class="field">
-    <%= f.label :password_confirmation %><br />
+    <%= f.label :new_password_confirmation %><br />
     <%= f.password_field :password_confirmation, autocomplete: "off" %>
   </div>
 
-  <div class="field">
-    <%= f.label :current_password %> <i>(we need your current password to confirm your changes)</i><br />
-    <%= f.password_field :current_password, autocomplete: "off" %>
-  </div>
+<br>
+
+
 
   <div class="actions">
     <%= f.submit "Update" %>
   </div>
 <% end %>
 
-<h3 class="cancel-headline">Cancel my account</h3>
+<h3 class="cancel-account-headline">Cancel my account</h3>
 
 <p>Unhappy? <%= button_to "Cancel my account", registration_path(resource_name), data: { confirm: "Are you sure?" }, method: :delete %></p>
 
-<%= link_to "Back", :back, class: "link-to" %>
+<%= link_to 'Back to homepage', posts_path, class: "edit-user-link-to-back-to-homepage"  %> 

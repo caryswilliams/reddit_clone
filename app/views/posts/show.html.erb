@@ -8,15 +8,17 @@
     <%= @post.content %>
   </p>
   <%= image_tag @post.image.url(:large)%>
+  <br><br>
+  <%= link_to 'Edit Post', edit_post_path(@post), class: "show-post-link-to-edit-post" %> 
 </div>
  
 <h2 class = "comments-headline">Comments</h2>
 <%= render @post.comments %>
  
-<h2 class = "comments-headline">Join in the discussion:</h2>
+<h2 class = "comments-headline">Join in the discussion</h2>
+<p>Please enter your comment below:</p>
 <%= render "comments/form" %>
  
-<br />
+<br>
  
-<%= link_to 'Edit Post', edit_post_path(@post), class: "link-to" %> |
-<%= link_to 'Back to Posts', posts_path, class: "link-to"  %> |
+<%= link_to 'Back to homepage', posts_path, class: "show-post-link-to-back-to-homepage"  %> 

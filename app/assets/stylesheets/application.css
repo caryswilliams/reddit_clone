@@ -20,39 +20,7 @@
 	box-sizing: border-box;
 }
 
-.link-to {
-	color: #E51E23;
-	text-decoration: none;
-}
-
-.link-to:hover {
-	color: #6CCA56;
-}
-
-/********** User Nav Bar ***********/
-
-.user-navbar {
-	display: flex;
-	justify-content: center;
-}
-
-.user-navbar-username {
-	margin: 0 0.5em;
-	letter-spacing: 1px;
-}
-
-.user-navbar-link {
-margin: 0 0.5em;
-color: #E51E23;
-text-decoration: none;
-letter-spacing: 1px;
-}
-
-.user-navbar-link:hover {
-	color: #6CCA56;
-}
-
-/********** Main Header & Links ***********/
+/********** Main Header & Main Nav Links ***********/
 
 .main-header-logo {
 	height: 3em;
@@ -79,18 +47,32 @@ letter-spacing: 1px;
 	color: #6CCA56;
 }
 
-/************* Search Bar *************/
+/********** User Nav Bar ***********/
 
-.search-bar {
-	margin-top: 5px;
-	margin-bottom: -10px;
+.user-navbar {
 	display: flex;
-	justify-content: flex-end;
+	justify-content: center;
+}
+
+.user-navbar-username {
+	margin: 0 0.5em;
+	letter-spacing: 1px;
+}
+
+.user-navbar-link {
+margin: 0 0.5em;
+color: #E51E23;
+text-decoration: none;
+letter-spacing: 1px;
+}
+
+.user-navbar-link:hover {
+	color: #6CCA56;
 }
 
 /************* Hero Banner *************/
 
-.hero {
+.hero-banner {
 	height: 250px;
 	background: url('../assets/gaming-banner5.jpg') no-repeat center;
 	background-color: #F3D946;
@@ -118,13 +100,7 @@ letter-spacing: 1px;
 	padding-right: 130px;
 }
 
-/************** Log In Form **************/
-
-.log-in-form {
-	margin-top: 10px;
-}
-
-/************ Posts - General ************/
+/************ Posts - Homepage ************/
 
 .post {
 	display: flex;
@@ -133,29 +109,8 @@ letter-spacing: 1px;
 	margin-top: 10px;
 }
 
-.post-index, .post-upvotes, .post-image, .post-title, .post-content {
+.post-upvotes, .post-image, .post-title, .post-content {
 	margin: 1em;
-}
-
-.post-image-image {
-	height: 5em;
-}
-
-.create-new-post:hover, .link-to-show:hover, .link-to-edit:hover, .link-to-delete:hover {
-	color: #6CCA56;
-}
-
-.create-new-post, .link-to-show, .link-to-edit, .link-to-delete {
-	color: #E51E23;
-	text-decoration: none;
-}
-
-.link-to-show, .link-to-edit, .link-to-delete {
-	padding-right: 10px;
-}
-
-.style {
-	border: 10px #E51E23;
 }
 
 .post-links {
@@ -165,7 +120,20 @@ letter-spacing: 1px;
 	text-align: left;
 }
 
-/*********** Posts - Upvotes & Downvotes ***********/
+.link-to-create-new-post, .link-to-show, .link-to-edit, .link-to-delete {
+	color: #E51E23;
+	text-decoration: none;
+}
+
+.link-to-create-new-post:hover, .link-to-show:hover, .link-to-edit:hover, .link-to-delete:hover {
+	color: #6CCA56;
+}
+
+.link-to-show, .link-to-edit, .link-to-delete {
+	padding-right: 10px;
+}
+
+/*********** Posts Homepage - Upvotes & Downvotes ***********/
 
 .post-upvotes {
 	display: flex;
@@ -182,11 +150,7 @@ letter-spacing: 1px;
 	color: #E51E23;
 }
 
-.post-upvote-image, .post-downvote-image {
-	height: 2em;
-}
-
-/************ Posts in Show *************/
+/************ Posts Show Page - Homepage *************/
 
 .show-post {
 	border: 5px solid #BABFCB;
@@ -194,7 +158,20 @@ letter-spacing: 1px;
 	padding: 5px;
 }
 
-/************* Comments in Show-Post **********/
+.show-post-link-to-edit-post, .show-post-link-to-back-to-homepage {
+	color: #E51E23;
+	text-decoration: none;
+}
+
+.show-post-link-to-edit-post:hover, .show-post-link-to-back-to-homepage:hover {
+	color: #6CCA56;
+}
+
+/************* Posts Show Page - Comments **********/
+
+.comments-headline {
+	color: #E51E23;
+}
 
 .show-comment {
 	border: 5px solid #F3D946;
@@ -202,29 +179,113 @@ letter-spacing: 1px;
 	padding: 5px;
 }
 
-.comments-headline {
+.link-to-destroy-comment {
+	color: #E51E23;
+	text-decoration: none;
+}
+
+.link-to-destroy-comment:hover {
+	color: #6CCA56;
+}
+
+/************* Posts - Edit Page **********/
+
+.edit-post-headline {
 	color: #E51E23;
 }
 
-/************* Edit Posts Page **********/
-
-.edit-page-headline {
+.edit-post-link-to-back-to-post, .edit-post-link-to-back-to-homepage {
 	color: #E51E23;
+	text-decoration: none;
 }
 
-/************* New Posts Page **********/
+.edit-post-link-to-back-to-post:hover, .edit-post-link-to-back-to-homepage:hover {
+	color: #6CCA56;
+}
+
+/************* Posts - Create a New Post Page **********/
 
 .new-post-headline {
 	color: #E51E23;
 }
 
-/************* Edit User Page **********/
+.new-post-link-to-back-to-homepage {
+	color: #E51E23;
+	text-decoration: none;
+}
 
-.edit-user-headline, .cancel-headline {
+.new-post-link-to-back-to-homepage:hover {
+	color: #6CCA56;
+}
+
+/********** START OF DEVISE PAGES **************/
+
+/************* Devise - Edit User Profile Page **********/
+
+.edit-user-headline, .cancel-account-headline {
 	color: #E51E23;
 }
 
-/************** Form *****************/
+.edit-user-link-to-back-to-homepage {
+	color: #E51E23;
+	text-decoration: none;
+}
+
+.edit-user-link-to-back-to-homepage:hover {
+	color: #6CCA56;
+}
+
+/************** Devise - Log in Page **************/
+
+.log-in-headline {
+	color: #E51E23;
+}
+
+.log-in-link-to-sign-up, .log-in-link-to-forgot-password {
+	color: #E51E23;
+	text-decoration: none;
+}
+
+.log-in-link-to-sign-up:hover, .log-in-link-to-forgot-password:hover {
+	color: #6CCA56;
+}
+
+/************** Devise - Forgot Your Password Page **************/
+
+.forgot-password-headline {
+	color: #E51E23;
+}
+
+.forgot-password-link-to-sign-up, .forgot-password-link-to-log-in{
+	color: #E51E23;
+	text-decoration: none;
+}
+
+.forgot-password-link-to-sign-up:hover, .forgot-password-link-to-log-in:hover {
+	color: #6CCA56;
+}
+
+/************** Devise - Sign Up Page **************/
+
+.sign-up-headline {
+	color: #E51E23;
+}
+
+.sign-up-link-to-log-in {
+	color: #E51E23;
+	text-decoration: none;
+}
+
+.sign-up-link-to-log-in:hover {
+	color: #6CCA56;
+}
+
+/********** END OF DEVISE PAGES **************/
+
+
+/************** Forms *****************/
+
+/* Entering a comment, editing a post & creating a new post */
 
 textarea, .text-field {
 	width: 100%;
@@ -239,7 +300,6 @@ textarea, .text-field {
 textarea {
 	height: 100px;
 }
-
 
 /************** Footer *****************/
 
