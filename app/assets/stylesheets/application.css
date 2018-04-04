@@ -165,7 +165,7 @@ letter-spacing: 1px;
 	text-align: left;
 }
 
-/*********** Posts - Upvotes ***********/
+/*********** Posts - Upvotes & Downvotes ***********/
 
 .post-upvotes {
 	display: flex;
@@ -194,6 +194,18 @@ letter-spacing: 1px;
 	padding: 5px;
 }
 
+/************* Comments in Show-Post **********/
+
+.show-comment {
+	border: 5px solid #F3D946;
+	margin-top: 10px;
+	padding: 5px;
+}
+
+.comments-headline {
+	color: #E51E23;
+}
+
 /************* Edit Posts Page **********/
 
 .edit-page-headline {
@@ -206,23 +218,28 @@ letter-spacing: 1px;
 	color: #E51E23;
 }
 
-/************* Comments in Show **********/
-
-.show-comment {
-	border: 5px solid #F3D946;
-	margin-top: 10px;
-	padding: 5px;
-}
-
-.comments-headline {
-	color: #E51E23;
-}
-
 /************* Edit User Page **********/
 
 .edit-user-headline, .cancel-headline {
 	color: #E51E23;
 }
+
+/************** Form *****************/
+
+textarea, .text-field {
+	width: 100%;
+	border-radius: 5px;
+	border: 1px solid #cdcfcf;
+	margin-top:5px;
+	padding: 5px;
+	color: #333;
+	background-color: #f6f8f8;
+}
+
+textarea {
+	height: 100px;
+}
+
 
 /************** Footer *****************/
 
@@ -246,3 +263,5 @@ letter-spacing: 1px;
 }
 
 /************* Media Queries ************/
+
+

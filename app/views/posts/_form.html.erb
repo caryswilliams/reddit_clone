@@ -13,19 +13,28 @@
 
   <div class="field">
     <%= form.label :title %>
-    <%= form.text_field :title %>
+    <%= form.text_field :title, class: 'text-field' %>
   </div>
+
+<br>
 
   <div class="field">
     <%= form.file_field :image %>
   </div>
+
+<br>
 
   <div class="field">
     <%= form.label :content %>
     <%= form.text_area :content %>
   </div>
 
+<br>
+
   <div class="actions">
     <%= form.submit %>
   </div>
+
+<br>
+
 <% end %>
